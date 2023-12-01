@@ -1,12 +1,16 @@
-def smallest_beautiful_number(x):
-    beautiful_number = x
+def find_smallest_beautiful_number(number_input):
+    beautiful_num = number_input
+
     while True:
-        if all(digit == str(x) for digit in str(beautiful_number)):
-          beautiful_number = beautiful_number + 1
+        if beautiful_num % number_input == 0:
+            unique_digits = set(str(beautiful_num))
+            
+            if len(unique_digits) == 1:
+                print(f"The smallest beautiful number is {beautiful_num}")
+                break
 
-        return beautiful_number
+        beautiful_num += 1
 
-x = int(input("Input x: "))
-result = smallest_beautiful_number(x)
-
-print(f"The smallest beautiful number divisible by {x} is {result}.")
+if __name__ == "__main__":
+    number_input = int(input("Number: "))
+    find_smallest_beautiful_number(number_input)
