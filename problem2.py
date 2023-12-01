@@ -6,7 +6,6 @@ def smallest_beautiful_number(x):
 
         return beautiful_number
 
-# Example usage
 x = int(input("Input x: "))
 result = smallest_beautiful_number(x)
 
